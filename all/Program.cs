@@ -1,4 +1,346 @@
-﻿//Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+﻿//Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+//Например 
+//m = 3, n = 4.
+//0,5 7 -2 -0,2
+//1 -3,3 8 -9,9
+//8 7,8 -7,1 9
+
+// Console.WriteLine("Введите размер строк массива");
+// int QuantityLines = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите размер колонок массива");
+// int QuantityColumns = Convert.ToInt32(Console.ReadLine());
+
+// void FillArrayRandomRealNumbers(double[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = Convert.ToDouble(new Random().Next(-10, 11)) / 10;
+//         }
+//     }
+// }
+
+// void PrintArray(double[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine("");
+//     }
+// }
+
+// double[,] numbers = new double[QuantityLines, QuantityColumns];
+// FillArrayRandomRealNumbers(numbers);
+// PrintArray(numbers);
+
+//Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+//Например, задан массив:
+//1 4 7 2
+//5 9 2 3
+//8 4 2 4
+//17 -> такого числа в массиве нет
+
+// Console.WriteLine("Введите строку позиции элемента");
+// int QuantityLines = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите колоноку позиции элемента");
+// int QuantityColumns = Convert.ToInt32(Console.ReadLine());
+
+// void FillArrayRandomRealNumbersInt(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+// }
+
+// void PrintArrayInt(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine("");
+//     }
+// }
+
+
+// int [,] numbers = new int [10,10];
+// FillArrayRandomRealNumbersInt(numbers);
+
+// if (QuantityLines > numbers.GetLength(0) || QuantityColumns > numbers.GetLength(1))
+// {
+//     Console.WriteLine("такого числа в массиве нет");
+// }
+// else
+// {
+//     Console.WriteLine($"значение элемента = {numbers[QuantityLines-1,QuantityColumns-1]}");
+// }
+
+// PrintArrayInt(numbers);
+
+//Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+//Например, задан массив:
+//1 4 7 2
+//5 9 2 3
+//8 4 2 4
+//Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+// Console.WriteLine("Введите размер строк массива");
+// int QuantityLines = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите размер колонок массива");
+// int QuantityColumns = Convert.ToInt32(Console.ReadLine());
+
+// void FillArrayRandomRealNumbersInt(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+// }
+
+// void PrintArrayInt(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine("");
+//     }
+// }
+
+// int[,] numbers = new int[QuantityLines, QuantityColumns];
+
+// FillArrayRandomRealNumbersInt(numbers);
+
+// for (int j = 0; j < numbers.GetLength(1); j++)
+// {
+//     double average = 0;
+//     for (int i = 0; i < numbers.GetLength(0); i++)
+//     {
+//         average = (average + numbers[i, j]);
+//     }
+//     average = average / QuantityLines;
+//     Console.WriteLine($"Среднее арифметическое столбцов по порядку: {average}" + "; ");
+// }
+// Console.WriteLine();
+// PrintArrayInt(numbers);
+
+//Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+//Например: 
+//0, 7, 8, -2, -2 -> 2
+//1, -7, 567, 89, 223-> 4
+
+// Console.Write("Введите числа: ");
+// int[] num = StringToNum(Console.ReadLine());
+
+// int[] StringToNum(string input)
+// {
+//     int count = 1;
+//     for (int i = 0; i < input.Length; i++)
+//     {
+//         if (input[i] == ' ')
+//         {
+//             count++;
+//         }
+//     }
+
+//     int[] num = new int [count];
+//     int index = 0;
+
+//     for (int i = 0; i < input.Length; i++)
+//     {
+//         string temp = "";
+
+//         while (input [i] != ' ')
+//         {
+//         if(i != input.Length - 1)
+//         {
+//             temp += input [i].ToString();
+//             i++;
+//         }
+//         else
+//         {
+//             temp += input [i].ToString();
+//             break;
+//         }
+//         }
+//         num[index] = Convert.ToInt32(temp);
+//         index++;
+//     }
+//     return num;
+// }
+
+// int sum = 0;
+// for (int i = 0; i < num.Length; i++)
+// {
+//     if (num[i] > 0)
+//     {
+//         sum++;
+//     }
+// }
+// Console.WriteLine($"Количество чисел больше 0 = {sum}");
+
+//Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; 
+//значения b1, k1, b2 и k2 задаются пользователем.
+//Например:
+//b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+// Console.WriteLine("Введите значение b1");
+// double b1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите значение k1");
+// double k1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите значение b2");
+// double b2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите значение k2");
+// double k2 = Convert.ToInt32(Console.ReadLine());
+
+
+// double x = (b2 - b1) / (k1 - k2);
+// double y = (k1 * (b2 - b1)) / (k1 - k2) + b1;
+
+// Console.WriteLine($"точка пересечения двух прямых -> ({x}; {y})");
+
+// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+//Напишите программу, которая покажет количество чётных чисел в массиве.
+//Например: [345, 897, 568, 234] -> 2
+
+// void FillArray(int[] num) //функция, которая создает рандомный массив
+// {
+//     for(int i = 0; i < num.Length; i++)
+//     {
+//         num[i] = new Random().Next(100,1000);
+//     }
+// }
+
+// void PrintArray(int[] num) //функция, которая показывает рандомный массив
+// {
+//     for(int i = 0; i < num.Length; i++)
+//     {
+//         Console.Write(num[i] + " ");
+//     }
+//     Console.Write("");
+// }
+
+// int[] num = new int[4];
+// int cnt = 0;
+
+// void EvenNumbers(int[] num) //функция, которая вычисляет кол-во четных чисел
+// {
+//     for (int a = 0; a < num.Length; a++)
+//     if (num[a] % 2 == 0)
+//     cnt++;
+// }
+
+// FillArray(num);
+// PrintArray(num);
+// EvenNumbers(num);
+// Console.Write($"-> {cnt}");
+
+
+
+//-------------------------------------------------------------------------------------------------
+//Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+//Например:
+//[3, 7, 23, 12] -> 19
+//[-4, -6, 89, 6] -> 0
+
+// void FillArray(int[] num) //функция, которая создает рандомный массив
+// {
+//     for(int i = 0; i < num.Length; i++)
+//     {
+//         num[i] = new Random().Next(-100,100);
+//     }
+// }
+
+// void PrintArray(int[] num) //функция, которая показывает рандомный массив
+// {
+//     for(int i = 0; i < num.Length; i++)
+//     {
+//         Console.Write(num[i] + " ");
+//     }
+//     Console.Write("");
+// }
+
+
+// void EvenPozition(int[] num) //функция, которая вычисляет сумму чисел на четных позициях
+// {
+//     int sum = 0;
+//     for (int a = 0; a < num.Length; a+=2)
+//     sum = sum + num[a];
+//     Console.Write($"{sum}");
+// }
+
+// int[] num = new int[4];
+
+// FillArray(num);
+// PrintArray(num);
+// EvenPozition(num);
+
+
+//-------------------------------------------------------------------------------------------------
+//Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+//Например:
+//[3 7 22 2 78] -> 76
+
+// void FillArray(int[] num) //функция, которая создает рандомный массив
+// {
+//     for(int i = 0; i < num.Length; i++)
+//     {
+//         num[i] = new Random().Next(1,100);
+//     }
+// }
+
+// void PrintArray(int[] num) //функция, которая показывает рандомный массив
+// {
+//     for(int i = 0; i < num.Length; i++)
+//     {
+//         Console.Write(num[i] + " ");
+//     }
+//     Console.WriteLine("");
+// }
+
+// void Difference(int[] num) //функция, которая вычисляет разницу максимального и минимального значений
+// {
+//     double min = Int32.MaxValue;
+//     double max = Int32.MinValue;
+
+//     for (int a = 0; a < num.Length; a++)
+//     {
+//         if (num[a] > max)
+//             {
+//                 max = num[a];
+//             }
+//         if (num[a] < min)
+//             {
+//                 min = num[a];
+//             }
+//     }
+//     Console.WriteLine($"MAX = {max}, MIN = {min}. Разница = {max - min}");
+// }
+
+// int[] num = new int[5];
+// FillArray(num);
+// PrintArray(num);
+// Difference(num);
+
+//Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 
 // Console.WriteLine("Введите первое число"); //Вводим первое число
 // int a = int.Parse(Console.ReadLine()); //Кладем первое число в переменную
@@ -84,7 +426,7 @@
 //     else 
 //     Console.WriteLine("Нет");
 // }
- 
+
 // Console.WriteLine("Введите пятизначное число:");
 // int number = int.Parse(Console.ReadLine()!);
 // Palindrom(number);
@@ -156,7 +498,7 @@
 // int dayNum = Convert.ToInt32(Console.ReadLine());
 
 // void NumberOfTheDayOfTheWeek (int dayNum) {
-    
+
 //   if (dayNum == 6 || dayNum == 7) {
 //   Console.WriteLine("Выходной день");
 //   }
